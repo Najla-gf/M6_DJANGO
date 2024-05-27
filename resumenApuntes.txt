@@ -1,0 +1,45 @@
+====================CREAR ENTORNO VIRTUAL====================
+    crear entorno virtual ➔ python -m venv vdjango
+         ➔ python -m venv => Da la instrucción de creación de un entorno virtual, venv significa
+        Virtual Envioronment
+
+        ➔ vdjango => Es el nombre del entorno virtual
+=============================================================
+
+====================ACTIVACION Y DESACTIVACION DE ENTORNO VIRTUAL====================
+     activar entorno virtual  ➔ source vdjango/Scripts/activate ➔ funchiona en bash
+
+     sale de el entorno virtual ➔ deactivate
+=====================================================================================
+
+====================COMPROBACIONES Y INSTALACION DE MODULOS====================
+    pip list ➔ ver las dependencias instaladas en el entorno
+
+    pip install django
+===============================================================================
+
+====================CREACION DE PROYECTO====================
+    django-admin startproject myFirstApp ➔ crea el proyecto "myFirstApp" es el nombre del proyecto
+============================================================
+
+====================CORRER EL PROYECTO====================
+    cd myFirstApp ➔ acceder a la carpeta del proyecto
+
+    correr le proyecto ➔ python manage.py runserver
+==========================================================
+
+====================CREACION DE APLICACIONES====================
+    creacion de proyecto ➔ python manage.py startapp login
+================================================================
+
+====================VINCULANDO APLICACION AL ARCHIVO SETTING.PY====================
+    INSTALLED_APPS = [
+    '<Nombre de la aplicacion>',
+    ]
+===================================================================================
+
+====================CREAR E INSTALAR UN TXT CON LAS DEPENDECIAS====================
+    crear un txt con las dependencias del proyecto ➔ pip freeze > requirements.txt
+
+    instalar las dependencias del proyecto pip install -r requirements.txt
+===================================================================================

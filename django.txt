@@ -1,0 +1,115 @@
+0. Etapa 0: Revisar si tenemos todo instalado.
+    python -V
+        Python 3.12.2
+
+    pip -V 
+        pip 24.0
+
+    pip list ----> ver las dependencias instaladas globalmente
+
+    pip install django -----> instalar django de manera global
+        Successfully installed asgiref-3.8.1 django-5.0.6 sqlparse-0.5.0
+
+*******************************************************************
+
+1. Etapa 1: Preparación del entorno virtual e instalación de dependencias.
+
+1.1 python -m venv vdjango
+
+    python -m venv ➔ Da la instrucción de creación de un entorno virtual, venv significa
+    Virtual Envioronment
+    vdjango ➔ Es el nombre del entorno virtual
+
+1.2 activar el entorno virtual
+    .\vdjango\Scripts\activate  (no me funciona)
+    call vdjango\Scripts\activate (cmd)
+    source Dia01/vdjango/Scripts/activate (funcionó en bash)
+
+1.3 desactivar el entorno virtual
+    deactivate
+
+********************************************************************
+2. Etapa 2: Creación del proyecto
+
+2.1 pip list
+        Package Version
+        ------- -------
+        pip     24.0
+        (vdjango) 
+
+2.2 instalar djando en el entorno
+    pip install django
+
+        Package  Version
+        -------- -------
+        asgiref  3.8.1
+        Django   5.0.6
+        pip      24.0
+        sqlparse 0.5.0
+        tzdata   2024.1
+        (vdjango)
+
+3. Etapa 3: Creación del proyecto
+    django-admin startproject myFirstProject
+
+**********************************************************************
+
+4. Etapa 4: Desplegar nuestro proyecto
+4.1
+    cd Dia01/myFirstProject --->> entrar a la carpeta
+
+4.2 ejecutar el proyecto
+    python manage.py runserver
+
+    python manage.py startapp login
+
+*********************************************
+Instalar virtualenvwrapper de manera global:
+    pip install virtualenvwrapper
+
+pip list
+    Package           Version
+    ----------------- -------
+    asgiref           3.8.1
+    distlib           0.3.8
+    Django            5.0.6
+    filelock          3.14.0
+    pbr               6.0.0
+    pip               24.0
+    platformdirs      4.2.2
+    sqlparse          0.5.0
+    stevedore         5.2.0
+    tzdata            2024.1
+    virtualenv        20.26.2
+    virtualenv-clone  0.5.7
+    virtualenvwrapper 6.1.0
+
+*************
+ejercicio guiado:
+    crear entorno virtual:
+        python -m venv mi-proyecto-django
+
+    activar entorno virtual:
+        source mi-proyecto-django/Scripts/activate
+
+    instalar django:
+        pip install django
+
+    creación del proyecto:
+        django-admin startproject mysite
+    
+    entrar a la carpeta:
+        cd my site
+    
+    cracion de aplicaciones:
+        python manage.py startapp pollsApp
+    
+    Vincular la aplicacion en archivo settings.py:
+        INSTALLED_APPS = [
+            'pollsApp',]
+
+    Generar un respaldo de las dependencias:
+        pip freeze > requirements.txt
+
+************************************************************
+

@@ -1,0 +1,25 @@
+python -m venv vdjango
+source vdjango/Scripts/activate
+pip install django
+pip install --upgrade pip
+django-admin startproject mysite
+cd mysite
+python manage.py startapp holaMundoApp
+en settings.py   
+    INSTALLED_APPS = [
+        "holaMundoApp",
+        ...
+    ]
+
+cd miProyecto
+python manage.py startapp mascotasApp
+
+******desafio guiado2*******
+source OtroEntorno/Scripts/activate
+django-admin startproject desafiog2
+cd desafiog2
+python manage.py startapp holaMundo2App
+
+******desafio guiado1*******
+python -m venv calendariolunar
+source calendariolunar/Scripts/activate
